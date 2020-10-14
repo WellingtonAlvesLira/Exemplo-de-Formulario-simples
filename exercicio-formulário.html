@@ -24,19 +24,25 @@
                 text-align: center;
             }
 
+            label{
+                display: block;
+                text-align: left;
+            }
+
             .campo{
+                display: block;
                 color: #2a578b;
                 width: 300px;
                 padding: 10px;
-                border: none;
-                margin-top: 10px;
+                border: 1px solid gray;
+                margin-bottom: 10px;
             }
 
             .btn {
                 width: 100px;
                 height: 30px;
                 margin: 5px;
-                border: 1px solid #ddd;
+                border: none;
                 background-color: #2a578b;
                 color: #fff;
                 cursor: pointer;
@@ -47,13 +53,13 @@
     <body>
         <div>
           <form name="f_validar" action="#" method="POST">
-              <Label>Nome:</Label><br/>
-              <input type="text" name="_nome" class="campo"><br/>
-              <label>E-mail:</label><br/>
-              <input type="email" name="_email" class="campo"><br/>
-              <label>Senha:</label><br/>
-              <input type="password" name="_senha" class="campo"></br>
-              <input type="submit" value="Entrar" onclick=" return validar()" class="btn" ></br> <!--onclick é um evento que acontecerá logo quando o usuário clicar no botão enviar-->
+              <Label>Nome:</Label>
+              <input type="text" name="_nome" class="campo">
+              <label>E-mail:</label>
+              <input type="email" name="_email" class="campo">
+              <label>Senha:</label>
+              <input type="password" name="_senha" class="campo">
+              <input type="submit" value="Entrar" onclick=" return validar()" class="btn" > <!--onclick é um evento que acontecerá logo quando o usuário clicar no botão enviar-->
               <input type="reset" value="Limpar" class="btn">
           </form>
        </div>
