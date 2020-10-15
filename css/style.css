@@ -31,8 +31,9 @@ label{
     height: 30px;
     margin: 5px;
     border: none;
-    background-color: #2a578b;
+    background-color: #4393ee;
     color: #fff;
+    text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
 }
