@@ -8,21 +8,21 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    
+
     <body>
 
         <div>
           
             <form name="f_validar" action="#" method="POST">
               
-              <Label>Nome:</Label>
-              <input type="text" name="_nome" class="campo">
+              <Label id="nome" >Nome:</Label>
+              <input type="text" name="_nome" id="nome" class="campo">
 
-              <label>E-mail:</label>
-              <input type="email" name="_email" class="campo">
+              <label id="mail">E-mail:</label>
+              <input type="email" name="_email" id="mail" class="campo">
 
-              <label>Senha:</label>
-              <input type="password" name="_senha" class="campo">
+              <label for="senha">Senha:</label>
+              <input type="password" name="_senha" id="senha" class="campo">
 
               <input type="submit" value="Entrar" onclick=" return validar()" class="btn" > <!--onclick é um evento que acontecerá logo quando o usuário clicar no botão enviar-->
               <input type="reset" value="Limpar" class="btn">
