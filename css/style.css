@@ -1,0 +1,38 @@
+body {
+    background-color: #f37373;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+div {
+    background-color: #101318b7;
+    width: 500px;
+    margin: 130px auto;
+    padding: 30px;
+}
+
+label{
+    color: white;
+    display: block;
+    text-align: left;
+}
+
+.campo{
+    display: block;
+    color: #2a578b;
+    font-size: 17px;
+    width: 300px;
+    padding: 7px;
+    border: 1px solid gray;
+    margin: 0 10px 10px 0;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    background-color: #2a578b;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

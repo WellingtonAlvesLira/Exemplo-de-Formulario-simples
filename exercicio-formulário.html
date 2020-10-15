@@ -1,113 +1,37 @@
 <!DOCTYPE html>
-<!--Objetivo: Criar um formulário com os campos NOME, E-MAIL E SENHA
+<!--Objetivo: Criar um formulário com os campos NOME, E-MAIL E SENH
               validar essas informações com a linguagem de programação javascript 
 -->
 <html lang="pt-BR">
     <head>
         <title>Formulário com validação</title>
         <meta charset="UTF-8"/>
-        <style>
-
-            body {
-                background-color: #f37373;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: bold;
-            }
-            div {
-                background-color: #101318b7;
-                width: 500px;
-                margin: 130px auto;
-                padding: 30px;
-            }
-
-            label{
-                color: white;
-                display: block;
-                text-align: left;
-            }
-
-            .campo{
-                display: block;
-                color: #2a578b;
-                font-size: 17px;
-                width: 300px;
-                padding: 7px;
-                border: 1px solid gray;
-                margin: 0 10px 10px 0;
-            }
-
-            .btn {
-                width: 100px;
-                height: 30px;
-                margin: 5px;
-                border: none;
-                background-color: #2a578b;
-                color: #fff;
-                font-weight: 600;
-                cursor: pointer;
-            }
-
-        </style>
+        <link rel="stylesheet" href="css/style.css">
     </head>
+    
     <body>
+
         <div>
-          <form name="f_validar" action="#" method="POST">
+          
+            <form name="f_validar" action="#" method="POST">
+              
               <Label>Nome:</Label>
               <input type="text" name="_nome" class="campo">
+
               <label>E-mail:</label>
               <input type="email" name="_email" class="campo">
+
               <label>Senha:</label>
               <input type="password" name="_senha" class="campo">
+
               <input type="submit" value="Entrar" onclick=" return validar()" class="btn" > <!--onclick é um evento que acontecerá logo quando o usuário clicar no botão enviar-->
               <input type="reset" value="Limpar" class="btn">
           </form>
-       </div>
+       
+        </div>
+
     </body>
 
-    <script>
-        
-        // Criando a função validar do formulário.
-        function validar() {
-
-            /*Definição de variáveis*/
-            var nome;
-            var email;
-            var senha;
-
-            /* Aqui, estou criando variaveis locais, como: nome,email e senha para receber as referências dos valores
-               que estão dentro das tag name="" localizadas no formulário html.  
-            */ 
-                nome =  document.f_validar._nome.value;
-                email = document.f_validar._email.value;
-                senha = document.f_validar._senha.value;
-
-            /*Validações de campos : Nome, E-mail e Senha do usuário.*/
-
-            if (nome == ''){
-                alert('Favor, Digite seu nome!!!');
-                /*O método HTMLElement.focus()  seta o foco em um determinado elemento em especifico, 
-                  caso esse elemento permita ter o foco neste elemento
-                */
-                document.f_validar._nome.focus();
-                return false;
-            }
-            
-            /*O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, 
-              retorna -1 caso o mesmo não esteja presente.
-            */
-            if (email == '' || email.indexOf('@') == -1 || email.indexOf('.') == -1){
-                alert('Favor. Informe um E-MAIL válido!!!');
-                document.f_validar._email.focus();
-                return false;
-            }
-
-            if (senha.length < 6 || senha == ''){
-                alert('Digite uma senha acima de 6 caracteres.');
-                document.f_validar._senha.focus();
-                return false;
-            } 
-        }
-
-    </script>
+<script src="js/form.js"></script>
 
 </html>
